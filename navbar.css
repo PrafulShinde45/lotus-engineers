@@ -45,10 +45,8 @@
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+.social-icons a:hover img { transform: scale(1.08); }
 
-.social-icons a:hover img {
-  transform: scale(1.1);
-}
 
 /* ========================== NAVBAR ========================== */
 .navbar {
