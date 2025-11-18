@@ -767,7 +767,7 @@ infinity loop
   transform: translateX(-50%);
   width: 90%;
   opacity: 0;
-  animation: fadeText 15s infinite;
+  animation: slideText 15s infinite;
   animation-play-state: paused;
 }
 
@@ -776,11 +776,14 @@ infinity loop
 .t2 { animation-delay: 5s; }
 .t3 { animation-delay: 10s; }
 
-/* Text fade/appear animation */
-@keyframes fadeText {
-  0%, 100% { opacity: 0; }
-  5%, 30% { opacity: 1; }        /* visible window */
-  35% { opacity: 0; }
+/* Text slide in from left, hold, slide out to right */
+@keyframes slideText {
+  0% { opacity: 0; transform: translateX(-150%); }
+  8% { opacity: 1; transform: translateX(-50%); }
+  30% { opacity: 1; transform: translateX(-50%); }
+  32% { opacity: 1; transform: translateX(0%); }
+  38% { opacity: 0.8; transform: translateX(150%); }
+  100% { opacity: 0; transform: translateX(150%); }
 }
 
 .info p {
@@ -798,23 +801,28 @@ infinity loop
 
 /* ---- FAST BOTTOM LINE ANIMATION ---- */
 .bottom-line {
-  width: 0%;
+  width: 100%;
   height: 4px;
   margin-top: 25px;
   border-radius: 10px;
   background: linear-gradient(to right, #e10980, #f79dc3, #e10980);
   opacity: 0;
-  animation: lineAnim 15s infinite;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineSweep 15s infinite;
   animation-play-state: paused;
 }
 
-/* Line animation sync with text */
-@keyframes lineAnim {
-  0%, 100% { width: 0%; opacity: 0; }
-  6% { width: 0%; opacity: 1; }
-  15% { width: 100%; opacity: 1; }  /* FAST LINE EXPANSION */
-  28% { width: 100%; }
-  32% { width: 0%; opacity: 0; }
+/* Line expands from left on enter, collapses to right on exit */
+@keyframes lineSweep {
+  0%   { opacity: 0; transform-origin: right; transform: scaleX(0); }
+  11%  { opacity: 0; transform-origin: right; transform: scaleX(0); }
+  12%  { opacity: 1; transform-origin: right; transform: scaleX(1); }
+  30%  { opacity: 1; transform-origin: right; transform: scaleX(1); }
+  39%  { opacity: 1; transform-origin: right; transform: scaleX(1); }
+  40%  { opacity: 1; transform-origin: left;  transform: scaleX(0); }
+  48%  { opacity: 0; transform-origin: left;  transform: scaleX(0); }
+  100% { opacity: 0; transform-origin: left;  transform: scaleX(0); }
 }
 
 
@@ -873,3 +881,8 @@ infinity loop
 .testimonials.visible .bottom-line {
   animation-play-state: running;
 }
+
+/* Sync line per testimonial with the same delays */
+.t1 .bottom-line { animation-delay: 0s; }
+.t2 .bottom-line { animation-delay: 5s; }
+.t3 .bottom-line { animation-delay: 10s; }

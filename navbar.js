@@ -15,10 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Error loading navbar:", err));
 
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.body.insertAdjacentHTML("beforeend", html);
-    })
-    .catch(err => console.error("Error loading footer:", err));
+  const existingFooter = document.querySelector(".footer");
+  if (!existingFooter) {
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.body.insertAdjacentHTML("beforeend", html);
+      })
+      .catch(err => console.error("Error loading footer:", err));
+  }
 });
