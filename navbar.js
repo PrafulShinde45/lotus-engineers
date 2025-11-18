@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       document.body.insertAdjacentHTML("afterbegin", data);
 
-      // Reinitialize toggle functionality after loading
       const menuToggle = document.getElementById("menu-toggle");
       const navLinks = document.getElementById("nav-links");
 
@@ -15,4 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
     .catch(err => console.error("Error loading navbar:", err));
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.body.insertAdjacentHTML("beforeend", html);
+    })
+    .catch(err => console.error("Error loading footer:", err));
 });
