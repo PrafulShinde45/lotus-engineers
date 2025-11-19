@@ -438,6 +438,7 @@ infinity loop
   box-shadow: 0 10px 25px rgba(73, 156, 200, 0.4);
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .about-container {
@@ -493,6 +494,8 @@ infinity loop
   color: #fff;
   transform: translateY(-5px);
 }
+
+
 
 .why-choose-us {
   margin-top: 90px;

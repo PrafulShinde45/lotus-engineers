@@ -89,6 +89,7 @@
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav-links a::after {
@@ -106,6 +107,8 @@
 .nav-links a.active::after {
   width: 100%;
 }
+
+
 
 .nav-links a:hover,
 .nav-links a.active {

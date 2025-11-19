@@ -1,0 +1,31 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Poppins",sans-serif;color:#2b2b2b;line-height:1.6;background:#fff}
+
+.btn{display:inline-block;padding:12px 28px;border-radius:30px;font-weight:500;font-size:15px;transition:.3s ease;cursor:pointer;border:none}
+.btn.primary{background:linear-gradient(90deg,#e10980,#499cc8);color:#fff;box-shadow:0 8px 20px rgba(225,9,128,.25)}
+.btn.primary:hover{transform:translateY(-2px)}
+
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.45);border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.08)}
+
+.contact-hero{position:relative;min-height:40vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff6fb4 0%,#ffedf6 50%,#ffffff 100%);padding:60px 24px;margin-top:120px}
+.contact-hero .hero-inner{padding:28px 32px;text-align:center}
+.contact-hero h1{font-size:38px;background:linear-gradient(90deg,#e10980,#499cc8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.contact-hero p{margin-top:8px;color:#555}
+.contact-hero .bubbles{position:absolute;inset:0;pointer-events:none}
+.bubble{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5}
+.b1{width:200px;height:200px;background:#e10980;top:10%;left:8%}
+.b2{width:180px;height:180px;background:#499cc8;bottom:10%;right:8%}
+
+.contact-main .wrap{max-width:1200px;margin:0 auto;padding:80px 24px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.left{padding:24px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form input,.form textarea{width:100%;padding:12px 14px;border:1px solid #ffd6e7;border-radius:12px;font-family:inherit;outline:none;background:#fff}
+.form textarea{resize:vertical}
+.right{display:grid;gap:14px}
+.info{padding:18px}
+.info h3{color:#e10980;margin-bottom:8px}
+.info a{color:#499cc8;text-decoration:none}
+.info a:hover{color:#e10980}
+
+@media(max-width:1024px){.grid{grid-template-columns:1fr}.form .row{grid-template-columns:1fr}}

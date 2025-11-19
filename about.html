@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Lotus Engineers</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script src="navbar.js" defer></script>
+</head>
+<body>
+
+  <section class="about-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-bubbles">
+      <span class="bubble b1"></span>
+      <span class="bubble b2"></span>
+      <span class="bubble b3"></span>
+    </div>
+    <div class="hero-inner glass reveal fade-up">
+      <h1>About Lotus Engineers</h1>
+      <p>Engineering precision. Delivering trust.</p>
+    </div>
+  </section>
+
+  <section class="mvv">
+    <div class="section-wrap">
+      <div class="cards">
+        <div class="card glass reveal fade-right">
+          <div class="icon">⚙️</div>
+          <h3>Mission</h3>
+          <p>To deliver modern, reliable machinery that elevates operational efficiency.</p>
+        </div>
+        <div class="card glass reveal fade-up">
+          <div class="icon">🚀</div>
+          <h3>Vision</h3>
+          <p>To be a trusted engineering partner powering growth through innovation.</p>
+        </div>
+        <div class="card glass reveal fade-left">
+          <div class="icon">🤝</div>
+          <h3>Values</h3>
+          <p>Integrity, craftsmanship, customer-first service and continuous improvement.</p>
+        </div>
+        <div class="card glass reveal fade-left">
+          <div class="icon">🔒</div>
+          <h3>Quality</h3>
+          <p>Certified standards, robust testing and assured performance across products.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="capabilities">
+    <div class="section-wrap cap-grid">
+      <div class="cap-left reveal fade-right">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop" alt="Factory and machinery" />
+          <span class="circle c1"></span>
+          <span class="circle c2"></span>
+        </div>
+      </div>
+      <div class="cap-right reveal fade-left">
+        <h2>What We Do</h2>
+        <div class="pills">
+          <div class="pill glass">Precision Engineering</div>
+          <div class="pill glass">Automation Systems</div>
+          <div class="pill glass">Custom Machine Design</div>
+          <div class="pill glass">Reliable Service & Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications">
+    <div class="section-wrap">
+      <h2 class="reveal fade-up">Certifications & Compliance</h2>
+      <div class="cert-grid">
+        <div class="cert glass reveal fade-right"><span>ISO 9001</span></div>
+        <div class="cert glass reveal fade-up"><span>Make in India</span></div>
+        <div class="cert glass reveal fade-up"><span>Safety Compliant</span></div>
+        <div class="cert glass reveal fade-left"><span>PAN India Service</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="section-wrap">
+      <h2 class="reveal fade-up">Factory & Workspace</h2>
+      <div class="grid">
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1581091014534-7c0d7a9a1be9?q=80&w=1200&auto=format&fit=crop" alt="Workspace" /></div>
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1200&auto=format&fit=crop" alt="Machinery" /></div>
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1581092333990-5d04d8e6c06b?q=80&w=1200&auto=format&fit=crop" alt="Production" /></div>
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1581091013530-6a57c5d9d868?q=80&w=1200&auto=format&fit=crop" alt="Team" /></div>
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1518770660430-1b47f9a4443a?q=80&w=1200&auto=format&fit=crop" alt="Automation" /></div>
+        <div class="item reveal fade-up"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop" alt="Facility" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-bubbles">
+      <span class="bubble b1"></span>
+      <span class="bubble b2"></span>
+    </div>
+    <div class="cta-inner glass reveal fade-up">
+      <h2>Why Work With Lotus Engineers</h2>
+      <p>Premium engineering, on-time delivery, and dependable service nationwide.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn primary">Contact Us</a>
+        <a href="#" class="btn secondary">Download Brochure</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && els.length) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add('in-view');
+        });
+      }, { threshold: 0.24 });
+      els.forEach(el => io.observe(el));
+    } else {
+      els.forEach(el => el.classList.add('in-view'));
+    }
+  </script>
+</body>
+</html>
