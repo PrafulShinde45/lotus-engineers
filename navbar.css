@@ -131,6 +131,11 @@
   outline: none;
   font-size: 14px;
   width: 160px;
+  transition: width .25s ease;
+}
+
+.search-box:focus-within input {
+  width: 320px;
 }
 
 .search-box button {

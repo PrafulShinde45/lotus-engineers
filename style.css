@@ -354,7 +354,7 @@ infinity loop
 }
 
 .about-right h2 {
-  color: #e10980;
+  color: #000000;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.3;
@@ -468,17 +468,21 @@ infinity loop
   text-align: center;
 }
 
-.products h2 {
-  color: #e10980;
-  margin-bottom: 30px;
-  font-size: 30px;
-}
+.products-head h2 { color: #000000; font-size: 32px; margin-bottom: 6px; }
+.products-head p { color: #606060; margin-bottom: 16px; }
+.products-head .btn { margin-bottom: 24px; }
+.products-foot { margin-top: 24px; }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.product-grid.premium { grid-template-columns: repeat(4, 1fr); }
+.glass { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 18px; box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+.pc-img { position: relative; height: 180px; overflow: hidden; border-top-left-radius: 18px; border-top-right-radius: 18px; }
+.pc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, filter .5s ease; }
+.pc-tag { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,.85); color: #e10980; padding: 6px 10px; border-radius: 999px; font-size: 12px; }
+.product-card:hover .pc-img img { transform: scale(1.06); filter: brightness(1.06); }
+.pc-body { padding: 14px; }
+.pc-body h3 { color: #e10980; margin-bottom: 6px; font-size: 18px; }
+.pc-body p { color: #555; font-size: 14px; }
 
 .product-card {
   background: #f79dc3;
@@ -494,6 +498,9 @@ infinity loop
   color: #fff;
   transform: translateY(-5px);
 }
+
+@media (max-width: 1024px) { .product-grid.premium { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .product-grid.premium { grid-template-columns: 1fr; } }
 
 
 
@@ -523,7 +530,8 @@ infinity loop
 }
 
 .finix-text h2 {
-  font-weight: 500;
+  color: #000000;
+  font-weight: 700;
   font-size: 35px;
   margin: 20px 0;
 }
@@ -662,7 +670,7 @@ infinity loop
 }
 
 .clients h2 {
-  color: #e10980;
+  color: #000000;
   margin-bottom: 40px;
   font-size: 30px;
 }
@@ -743,7 +751,7 @@ infinity loop
 }
 
 .testimonials h2 {
-  color: #e10980;
+  color: #000000;
   font-size: 35px;
   margin-bottom: 50px;
   font-weight: bold;
