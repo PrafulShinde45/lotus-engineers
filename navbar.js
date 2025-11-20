@@ -12,6 +12,25 @@ document.addEventListener("DOMContentLoaded", () => {
           navLinks.classList.toggle("active");
         });
       }
+
+      const setActiveLink = () => {
+        const links = document.querySelectorAll('#nav-links a');
+        if (!links.length) return;
+        const path = window.location.pathname;
+        let current = path.split('/').pop();
+        if (!current || current === '') current = 'index.html';
+        links.forEach(a => {
+          const href = a.getAttribute('href');
+          const last = (href || '').split('/').pop();
+          if (last === current) {
+            a.classList.add('active');
+          } else {
+            a.classList.remove('active');
+          }
+        });
+      };
+
+      setActiveLink();
     })
     .catch(err => console.error("Error loading navbar:", err));
 

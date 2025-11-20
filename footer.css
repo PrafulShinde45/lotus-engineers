@@ -107,7 +107,7 @@
 .footer-social svg {
   width: 24px;
   height: 24px;
-  color: #e10980;
+  color: #ffffff;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 .footer-social a:hover svg { color: #499cc8; transform: scale(1.06); }
